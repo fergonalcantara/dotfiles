@@ -1,0 +1,93 @@
+/* Estilo compacto y coherente para Waybar */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 11px;
+}
+
+window#waybar {
+  all: unset;
+}
+
+/* Estilo general para todos los módulos */
+#clock, #battery, #network, #wireplumber, #bluetooth, #tray,
+#custom-power, #cpu, #memory, #custom-player, #custom-gpuinfo {
+  background-color: rgba(59, 66, 82, 0.6);
+  color: #eceff4;
+  margin: 4px 2px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo específico para el reproductor */
+#custom-player {
+  background-color: rgba(60, 60, 60, 0.3);
+}
+
+/* Workspaces */
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  background-color: rgba(179, 229, 252, 0.85);
+  color: rgba(0, 19, 26, 1);
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  background-color: rgba(0, 19, 26, 0.85);
+  color: rgba(179, 229, 252, 1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#workspaces button.focused {
+  background-color: rgba(179,229,252,0.85);
+}
+
+#workspaces button.empty {
+  opacity: 0.3;
+}
+
+#workspaces button.visible {
+  color: #dddddd;
+}
+/* Iconos del tray más pequeños */
+#tray image {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* Tooltip */
+tooltip {
+  background: #3b4252;
+  color: #eceff4;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#clock {
+  background-color: #28B6F6;
+  color: black;
+}
+
+#battery.warning {
+  background-color: #ffa726;
+}
+
+#battery.critical {
+  background-color: #ef5350;
+}
+
+#custom-cava {
+  font-family: monospace;
+  font-size: 12px;
+  min-width: 60px;
+  background-color: rgba(59, 66, 82, 0.6);
+  color: #eceff4;
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin: 4px 2px;
+}
